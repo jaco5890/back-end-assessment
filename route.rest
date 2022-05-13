@@ -1,0 +1,61 @@
+GET http://localhost:3000/employees
+
+###
+
+GET http://localhost:3000/employees/627d88ba55134853a4382681
+
+###
+
+POST http://localhost:3000/employees
+Content-Type: application/json
+
+{
+    "userInformation": {
+        "firstName": "jack",
+        "lastName": "smit",
+        "contactNumber": "0748904346",
+        "emailAddress": "jacovandermerwe@gmail.com",
+        "dateOfBirth": ""
+    },
+    "addressInformation": {
+        "street": "test street 1",
+        "city": "pretoria",
+        "postalCode": 4590,
+        "country": "South Africa"
+    },
+    "skills": [{
+        "skill": "angular",
+        "yearsExperience": 3,
+        "seniorityRating": "senior"
+    }]
+}
+
+###
+
+DELETE http://localhost:3000/employees/627d791316eb645fa2baf1ff
+
+###
+
+PATCH http://localhost:3000/employees/627d52546f49bc7b4a859b34
+Content-Type: application/json
+
+{
+    "userInformation": {
+        "firstName": "fanie2",
+        "lastName": "venter",
+        "contactNumber": "0111111111",
+        "emailAddress": "fanie@gmail.com",
+        "dateOfBirth": ""
+    },
+    "addressInformation": {
+        "street": "test street 1",
+        "city": "pretoria",
+        "postalCode": 4590,
+        "country": "South Africa"
+    },
+    "skills": [{
+        "skill": "angular",
+        "yearsExperience": 3,
+        "seniorityRating": "senior"
+    }]
+}
