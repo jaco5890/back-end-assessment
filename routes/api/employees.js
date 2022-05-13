@@ -29,6 +29,7 @@ router.post('/', async(request,response) => {
         basicInformation: request.body.basicInformation,
         addressInformation: request.body.addressInformation,
         skills: request.body.skills,
+        ID: generateID()
     })
 
     try{
@@ -89,6 +90,17 @@ async function getEmployee(request, response, next) {
     }
     response.employee = employee
     next()
-  }
+}
 
+function generateID(){
+  var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var randomNumber = Math.floor(1000 + Math.random() * 9000);
+  var randomCharacters = ""
+  var generatedId = "";
+
+  for(let i =0; i < 2; i++){
+    randomCharacters += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return randomCharacters + randomNumber;
+}
 module.exports = router;
