@@ -10,15 +10,15 @@ POST http://localhost:3000/employees
 Content-Type: application/json
 
 {
-    "userInformation": {
-        "firstName": "jack",
+    "basicInformation": {
+        "firstName": "jackssssssss",
         "lastName": "smit",
         "contactNumber": "0748904346",
-        "emailAddress": "jacovandermerwe@gmail.com",
-        "dateOfBirth": ""
+        "email": "jacovandermerwe@gmail.com",
+        "birthday": ""
     },
     "addressInformation": {
-        "street": "test street 1",
+        "streetAddress": "test street 1",
         "city": "pretoria",
         "postalCode": 4590,
         "country": "South Africa"
@@ -26,7 +26,7 @@ Content-Type: application/json
     "skills": [{
         "skill": "angular",
         "yearsExperience": 3,
-        "seniorityRating": "senior"
+        "seniority": "senior"
     }]
 }
 
